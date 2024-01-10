@@ -84,7 +84,14 @@ Ahmedabad, Aizawl, Amaravati, Amritsar, Bengaluru, Bhopal, Brajrajnagar, Chandig
 ```sh
 df.info()
 ```
+- Melihat value count dari aqi dibedakan menjadi 5 : 1.Baik (0-50), 2.Memuaskan (51-100), 3.Sedang (101-200), 4.Buruk (201-300), Sangat Buruk (301-400), 5.Parah (401-500), atau tingkat Berbahaya (500+).
 
+```sh
+df['aqi'].value_counts()
+```
+[![N|Solid](https://stat.overdrive.in/wp-content/uploads/2019/12/AQI-table-1.jpg)](https://nodesource.com/products/nsolid)
+
+**Handling Missing Value**
 - Melakukan pengecekan missing value dan outlier, metode yang digunakan untuk mengatasi outlier adalah IQR yaitu dengan cara mengukur sebaran data dan menghitung selisih antara nilai kuartil ketiga (Q3) dan kuartil pertama (Q1), membantu identifikasi dan analisis pencilan (outliers) dalam suatu set data.
 
 ```sh
@@ -104,13 +111,7 @@ dfx=dfx[~((dfx<(Q1-1.5*IQR))|(dfx>(Q3+1.5*IQR))).any(axis=1)]
 dfx.shape
 ```
 
-- Melihat value count dari aqi dibedakan menjadi 5 : 1.Baik (0-50), 2.Memuaskan (51-100), 3.Sedang (101-200), 4.Buruk (201-300), Sangat Buruk (301-400), 5.Parah (401-500), atau tingkat Berbahaya (500+).
-
-```sh
-df['aqi'].value_counts()
-```
-
-[![N|Solid](https://stat.overdrive.in/wp-content/uploads/2019/12/AQI-table-1.jpg)](https://nodesource.com/products/nsolid)
+**Univariate Analysis**
 
 - Mengecek korelasi antar fitur, dimana semua fitur input memiliki korelasi yang positif dan cenderung menguatkan terhadap fitur target yaitu 'aqi' kecuali fitur 'o3' dan 'so2' yang memiliki korelasi positif namun lemah
   ![Alt text](image.png)
