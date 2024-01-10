@@ -162,5 +162,5 @@ Referensi:
 
 Sumber:
 
-- [Kaggle: Air Pollution Data of India 2020-2023](https://www.kaggle.com/datasets/seshupavan/air-pollution-data-of-india-2020-2023).
-- [Kaggle: New Delhy Air Quality](https://www.kaggle.com/datasets/anuragbantu/new-delhi-air-quality).
+- [Air Pollution Data of India 2020-2023](https://www.kaggle.com/datasets/seshupavan/air-pollution-data-of-india-2020-2023).
+- [New Delhy Air Quality](https://www.kaggle.com/datasets/anuragbantu/new-delhi-air-quality).
