@@ -53,12 +53,12 @@ Dataset ini berisi data Polusi Udara harian tahun 2020 hingga tahun 2023, dengan
 
 | Feature | Deskripsi                                                                                                                                   |
 | ------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
-| CITY    | Nama Kota di India tempat kualitas udara diukur[PlDb]                                                                                       |
-| AQI     | Karbon Monoksida, gas tidak berwarna dan tidak berbau yang dihasilkan oleh pembakaran tidak sempurna bahan bakar fosil dan biomassa[PlGd]   |
-| CO      | Nitric Oxide, gas berbahaya yang dihasilkan dari pembakaran bahan bakar fosil dan proses industri.[PlOd]                                    |
+| CITY    | Nama Kota di India tempat kualitas udara diukur                                                                                             |
+| AQI     | Karbon Monoksida, gas tidak berwarna dan tidak berbau yang dihasilkan oleh pembakaran tidak sempurna bahan bakar fosil dan biomassa         |
+| CO      | Nitric Oxide, gas berbahaya yang dihasilkan dari pembakaran bahan bakar fosil dan proses industri.                                          |
 | O3      | Ozon, gas yang terbentuk ketika sinar matahari bereaksi dengan polutan seperti nitrogen oksida dan senyawa organik yang mudah menguap[PlGa] |
-| PM2.5   | Partikulat (PM) dengan diameter 2,5 mikrometer atau kurang, yang berhubungan dengan polusi partikel halus.[PlGa]                            |
-| PM10    | Partikulat (PM) dengan diameter 10 mikrometer atau kurang, yang berhubungan dengan polusi partikel kasar.[PlGa]                             |
+| PM2.5   | Partikulat (PM) dengan diameter 2,5 mikrometer atau kurang, yang berhubungan dengan polusi partikel halus.                                  |
+| PM10    | Partikulat (PM) dengan diameter 10 mikrometer atau kurang, yang berhubungan dengan polusi partikel kasar.                                   |
 
 Notes: Semua kolom polutan diatas diukur dalam μg/m3
 
