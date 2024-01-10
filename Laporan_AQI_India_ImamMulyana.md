@@ -16,12 +16,7 @@ Untuk menyelesaikan masalah tersebut pemerintah india mengerahkan alat penyiram 
 
 Beberapa cara untuk menyelesaikan masalah tersebut juga bisa melalui penerapan hasil riset sebagai pembanding penyelesaian masalah seperti citizen lawsuit yaitu memaksa masyarakat dengan regulasi hukum terkait lingkungan hidup, modifikasi cuaca untuk mengurangi dampak polusi udara, sosialisasi dan edukasi kesemua elemen masyarakat terutama penyumbang polusi udara yaitu para petani pembakar sisa tanaman, penggunaan kendaraan umum, tranformasi industri ke ramah lingkungan, peremajaan kendaraan umum, dan SOP terkait pengelolaan pembangunan kontruksi yang memiliki dampak polutan partikel debu.
 
-Referensi:
 
-- [Perlindungan Hak Warga Negara Terhadap Kelalaian Pemerintah Melalui Gugatan Citizen Lawsuit](https://journal.pusatpenelitian.com/index.php/jmi/article/view/64)
-- [Kajian Dampak Lingkungan Industri Terhadap Kualiats Hidup Warga Sekitar](https://jurnal.stikescendekiautamakudus.ac.id/index.php/JKM/article/view/384)
-- [Paradigma Baru Pemanfaatan Teknologi Modifikasi Cuaca dalam Upaya Penanganan Bencana Kebakaran Hutan dan Lahan di Indonesia](https://ejurnal.bppt.go.id/index.php/JSTMC/article/view/5303)
-- [Sosialisasi dan Edukasi Pencegahan Dini Resiko Kebakaran Lahan Gambut di Musim Kemarau kepada Masyarakat Desa Kapur](https://journal-center.litpam.com/index.php/linov/article/view/969)
 
 ## Business Understanding
 
@@ -52,10 +47,6 @@ Teknik pengumpulan data adalah melalui observasi secara realtime yaitu pengumpul
 
 Jumlah data yang digunakan pada studi kasus ini adalah 23.504 yang tersebar di 26 kota negara India. Adapun terkait data missing value terdapat pada kolom 'o3' dimana ada sekitar 1551 data bernilai 0 oleh karenanya dilakukan handling missing value dengan teknik droup out dengan alasan jumlah dataset yang besar tidak akan terpengaruh, dan karena dataset ini menggunakan satuan ukur dalam μg/m3 dan untuk parameter AQI India dalam mg/m3 maka perlu diperhatikan nilai satuannya (μg/m3 ke mg/m3, sama dengan dibagi 10).
 
-Sumber:
-
-- [Kaggle: Air Pollution Data of India 2020-2023](https://www.kaggle.com/datasets/seshupavan/air-pollution-data-of-india-2020-2023).
-- [Kaggle: New Delhy Air Quality](https://www.kaggle.com/datasets/anuragbantu/new-delhi-air-quality).
 
 ### Variabel-variabel pada AQI India dataset adalah sebagai berikut:
 
@@ -202,3 +193,17 @@ $$ Recall = {True Positives \over True Positives + False Negatives} $$
    F1 score adalah metrik yang menggabungkan presisi dan recall menjadi satu nilai tunggal. Ini berguna ketika ingin mencari keseimbangan antara presisi dan recall, terutama jika jumlah false positives dan false negatives memiliki dampak yang signifikan.
 
 $$ F1 Score = {2 × Presisi × Recall \over Presisi + Recall} $$
+
+
+
+Referensi:
+
+- [Perlindungan Hak Warga Negara Terhadap Kelalaian Pemerintah Melalui Gugatan Citizen Lawsuit](https://journal.pusatpenelitian.com/index.php/jmi/article/view/64)
+- [Kajian Dampak Lingkungan Industri Terhadap Kualiats Hidup Warga Sekitar](https://jurnal.stikescendekiautamakudus.ac.id/index.php/JKM/article/view/384)
+- [Paradigma Baru Pemanfaatan Teknologi Modifikasi Cuaca dalam Upaya Penanganan Bencana Kebakaran Hutan dan Lahan di Indonesia](https://ejurnal.bppt.go.id/index.php/JSTMC/article/view/5303)
+- [Sosialisasi dan Edukasi Pencegahan Dini Resiko Kebakaran Lahan Gambut di Musim Kemarau kepada Masyarakat Desa Kapur](https://journal-center.litpam.com/index.php/linov/article/view/969)
+
+Sumber:
+
+- [Kaggle: Air Pollution Data of India 2020-2023](https://www.kaggle.com/datasets/seshupavan/air-pollution-data-of-india-2020-2023).
+- [Kaggle: New Delhy Air Quality](https://www.kaggle.com/datasets/anuragbantu/new-delhi-air-quality).
