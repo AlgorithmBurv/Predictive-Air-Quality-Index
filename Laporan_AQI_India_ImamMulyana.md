@@ -73,6 +73,7 @@ Ahmedabad, Aizawl, Amaravati, Amritsar, Bengaluru, Bhopal, Brajrajnagar, Chandig
 - Melihat value count dari aqi dibedakan menjadi 5 : 1.Baik (0-50), 2.Memuaskan (51-100), 3.Sedang (101-200), 4.Buruk (201-300), Sangat Buruk (301-400), 5.Parah (401-500), atau tingkat Berbahaya (500+).
 [![N|Solid](https://stat.overdrive.in/wp-content/uploads/2019/12/AQI-table-1.jpg)](https://nodesource.com/products/nsolid)
 - Melakukan pengecekan missing value dan outlier
+- 
 **Univariate Analysis**
 
 - Mengecek korelasi antar fitur, dimana semua fitur input memiliki korelasi yang positif dan cenderung menguatkan terhadap fitur target yaitu 'aqi' kecuali fitur 'o3' dan 'so2' yang memiliki korelasi positif namun lemah
@@ -89,13 +90,18 @@ Ahmedabad, Aizawl, Amaravati, Amritsar, Bengaluru, Bhopal, Brajrajnagar, Chandig
 ## Data Preparation
 
 **Train Tes Split**
+
 - Memisahkan data inputan dan data target, karena termasuk metode supervised learning yang membutuhkan data inputan dan target atau label
 - Karena dataset ini menggunakan satuan ukur dalam μg/m3 dan untuk parameter AQI India dalam mg/m3 maka perlu diperhatikan nilai satuannya (μg/m3 ke mg/m3, sama dengan dibagi 10).
 - Mengatur serta membagi ukuran data training dan test dengan perbandingan 9:1, hal ini didasasrkan pada jumlah data dimana presentase 10% (2.354,4) sudah dianggap cukup untuk mewakili testing dari jumlah keseluruhan data (23.504)
 - Mengatur random state agar data dalam kondisi yang sama saat digunakan kembali
+- 
 **Handling Missing Value dengan IQR**
+  
 - Menagani missing value dengan teknik droup out dengan alasan jumlah dataset yang besar tidak akan terpengaruh
+- 
 **Handling outlier**
+  
 - Menangani outlier hasil analisa pada tahap data understanding dengan metode IQR yaitu dengan cara mengukur sebaran data dan menghitung selisih antara nilai kuartil ketiga (Q3) dan kuartil pertama (Q1), membantu identifikasi dan analisis pencilan (outliers) dalam suatu set data.
 
 ## Modeling
