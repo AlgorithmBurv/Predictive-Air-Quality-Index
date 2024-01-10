@@ -16,8 +16,6 @@ Untuk menyelesaikan masalah tersebut pemerintah india mengerahkan alat penyiram 
 
 Beberapa cara untuk menyelesaikan masalah tersebut juga bisa melalui penerapan hasil riset sebagai pembanding penyelesaian masalah seperti citizen lawsuit yaitu memaksa masyarakat dengan regulasi hukum terkait lingkungan hidup, modifikasi cuaca untuk mengurangi dampak polusi udara, sosialisasi dan edukasi kesemua elemen masyarakat terutama penyumbang polusi udara yaitu para petani pembakar sisa tanaman, penggunaan kendaraan umum, tranformasi industri ke ramah lingkungan, peremajaan kendaraan umum, dan SOP terkait pengelolaan pembangunan kontruksi yang memiliki dampak polutan partikel debu.
 
-
-
 ## Business Understanding
 
 Dampak kesehatan masyarakat yang signifikan akibat polusi udara di India adalah lonjakan infeksi saluran pernapasan seperti flu, bronkitis dan asma akut di antara penduduk kota yang mencapai 20 juta orang sehingga menimbulkan risiko kesehatan publik yang tinggi. Potensi kerugian ekonomi juga dapat terlihat dari penutupan sekolah yang dapat menghambat aktivitas pendidikan, mobilitas masyarakat, dan penangguhan proyek kontruksi.
@@ -47,7 +45,6 @@ Teknik pengumpulan data adalah melalui observasi secara realtime yaitu pengumpul
 
 Jumlah data yang digunakan pada studi kasus ini adalah 23.504 yang tersebar di 26 kota negara India. Adapun terkait data missing value terdapat pada kolom 'o3' dimana ada sekitar 1551 data bernilai 0 oleh karenanya dilakukan handling missing value dengan teknik droup out dengan alasan jumlah dataset yang besar tidak akan terpengaruh, dan karena dataset ini menggunakan satuan ukur dalam μg/m3 dan untuk parameter AQI India dalam mg/m3 maka perlu diperhatikan nilai satuannya (μg/m3 ke mg/m3, sama dengan dibagi 10).
 
-
 ### Variabel-variabel pada AQI India dataset adalah sebagai berikut:
 
 Dataset ini berisi data Polusi Udara harian tahun 2020 hingga tahun 2023, dengan rincian sebagai berikut:
@@ -71,36 +68,13 @@ Ahmedabad, Aizawl, Amaravati, Amritsar, Bengaluru, Bhopal, Brajrajnagar, Chandig
 **Mendiskripsikan variabel:**
 
 - Melihat Jenis variabel pada dataset
-
-```sh
-df.info()
-```
 - Melihat value count dari aqi dibedakan menjadi 5 : 1.Baik (0-50), 2.Memuaskan (51-100), 3.Sedang (101-200), 4.Buruk (201-300), Sangat Buruk (301-400), 5.Parah (401-500), atau tingkat Berbahaya (500+).
 
-```sh
-df['aqi'].value_counts()
-```
 [![N|Solid](https://stat.overdrive.in/wp-content/uploads/2019/12/AQI-table-1.jpg)](https://nodesource.com/products/nsolid)
 
 **Handling Missing Value**
+
 - Melakukan pengecekan missing value dan outlier, metode yang digunakan untuk mengatasi outlier adalah IQR yaitu dengan cara mengukur sebaran data dan menghitung selisih antara nilai kuartil ketiga (Q3) dan kuartil pertama (Q1), membantu identifikasi dan analisis pencilan (outliers) dalam suatu set data.
-
-```sh
-# cek outlier
-
-sns.boxplot(x='variable', y='value', data=pd.melt(dfx))
-plt.show()
-
-# IQR
-
-Q1 = dfx.quantile(0.25)
-Q3 = dfx.quantile(0.75)
-IQR=Q3-Q1
-dfx=dfx[~((dfx<(Q1-1.5*IQR))|(dfx>(Q3+1.5*IQR))).any(axis=1)]
-
-# Cek ukuran dataset setelah kita drop outliers
-dfx.shape
-```
 
 **Univariate Analysis**
 
@@ -111,29 +85,14 @@ dfx.shape
   ![Alt text](image-2.png)
 - Mengecek distribusi data, dimana distribusi fitur aqi pada kategori 5 sangat tinggi dibanding kategori 1-4. Hal ini menunjukkan banyak sekali terjadi kualitas udara yang buruk terjadi
 - ![Alt text](image-3.png)
-  
 - ![Alt text](image-4.png)
 
 ## Data Preparation
 
 - Memisahkan data inputan dan data target, karena termasuk metode supervised learning yang membutuhkan data inputan dan target atau label
-
-```sh
-# Input Variabel
-x=df[['co','no2','o3','so2','pm2_5','pm10']]/10
-
-# Target Variabel
-y=df['aqi'].astype('category')
-```
-
 - Mengatur serta membagi ukuran data training dan test dengan perbandingan 9:1, hal ini didasasrkan pada jumlah data dimana presentase 10% (2.354,4) sudah dianggap cukup untuk mewakili testing dari jumlah keseluruhan data (23.504)
 - Mengatur random state agar data dalam kondisi yang sama saat digunakan kembali
-
-```sh
-# Split: Training 90% & Testing 10%
-
-x_train, x_test, y_train, y_test = train_test_split(x,y, test_size=0.1, random_state=42)
-```
+- Metode yang digunakan untuk mengatasi outlier adalah IQR yaitu dengan cara mengukur sebaran data dan menghitung selisih antara nilai kuartil ketiga (Q3) dan kuartil pertama (Q1), membantu identifikasi dan analisis pencilan (outliers) dalam suatu set data.
 
 ## Modeling
 
@@ -193,8 +152,6 @@ $$ Recall = {True Positives \over True Positives + False Negatives} $$
    F1 score adalah metrik yang menggabungkan presisi dan recall menjadi satu nilai tunggal. Ini berguna ketika ingin mencari keseimbangan antara presisi dan recall, terutama jika jumlah false positives dan false negatives memiliki dampak yang signifikan.
 
 $$ F1 Score = {2 × Presisi × Recall \over Presisi + Recall} $$
-
-
 
 Referensi:
 
