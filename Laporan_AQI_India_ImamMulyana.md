@@ -117,11 +117,10 @@ df['aqi'].value_counts()
 - mengecek hubungan co dengan pm10 dan pm25 yang merupakan faktor signifikan
   ![Alt text](image-1.png)
   ![Alt text](image-2.png)
-- Mengecek distribusi data, dimana distribusi fitur aqi pada kategori 5 sangat tinggi dibanding kategori 1-4.
-  Hal ini menunjukkan banyak sekali terjadi kualitas udara yang buruk terjadi
-  ![Alt text](image-3.png)
+- Mengecek distribusi data, dimana distribusi fitur aqi pada kategori 5 sangat tinggi dibanding kategori 1-4. Hal ini menunjukkan banyak sekali terjadi kualitas udara yang buruk terjadi
+- ![Alt text](image-3.png)
   
-  ![Alt text](image-4.png)
+- ![Alt text](image-4.png)
 
 ## Data Preparation
 
