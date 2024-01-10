@@ -30,12 +30,14 @@ Oleh karena itu diperlukan prediksi sedini mungkin terhadap kualitas udara demi 
 ### Goals
 
 1.  Mengetahui fitur yang paling berkorelasi dengan kualitas udara.
-2.  Membuat model machine learning yang dapat memprediksi kualitas udara sedini mungkin berdasarkan fitur-fitur yang ada.
+2.  Membuat model machine learning klasifikasi yang dapat memprediksi kualitas udara sedini mungkin berdasarkan fitur-fitur yang ada dengan prediksi diatas 90%
+3.  Mengetahui faktor signifikan fitur yang paling berkontribusi pada polusi udara setelah pemodelan berhasil
+   
 
 ### Solution statements
 
 1.  Menerapkan model machine learning klasifikasi: Decisio Tree dan Random Forest untuk memprediksi tingkat kualitas udara di wilayah tertentu berdasarkan variabel co, no2, o3, so2, pm2_5, dan pm10.
-2.  Memberikan pemberitahuan dini kepada masyarakat dan otoritas terkait ketika tingkat polusi suatu daerah sudah terklasifikasi.
+2.  Memberikan pemberitahuan dini kepada masyarakat dan otoritas terkait ketika tingkat polusi suatu daerah sudah terklasifikasi dengan cara mendeploy model ke perangkat iot sebagai pendeteksi kualitas udara yang terhubung dengan sistem mobile maupun web sehingga dapat memberikan informasi secara realtime
 
 ## Data Understanding
 
@@ -69,30 +71,27 @@ Ahmedabad, Aizawl, Amaravati, Amritsar, Bengaluru, Bhopal, Brajrajnagar, Chandig
 
 - Melihat Jenis variabel pada dataset
 - Melihat value count dari aqi dibedakan menjadi 5 : 1.Baik (0-50), 2.Memuaskan (51-100), 3.Sedang (101-200), 4.Buruk (201-300), Sangat Buruk (301-400), 5.Parah (401-500), atau tingkat Berbahaya (500+).
-
 [![N|Solid](https://stat.overdrive.in/wp-content/uploads/2019/12/AQI-table-1.jpg)](https://nodesource.com/products/nsolid)
-
-**Handling Missing Value**
-
-- Melakukan pengecekan missing value dan outlier, metode yang digunakan untuk mengatasi outlier adalah IQR yaitu dengan cara mengukur sebaran data dan menghitung selisih antara nilai kuartil ketiga (Q3) dan kuartil pertama (Q1), membantu identifikasi dan analisis pencilan (outliers) dalam suatu set data.
-
+- Melakukan pengecekan missing value dan outlier
 **Univariate Analysis**
 
 - Mengecek korelasi antar fitur, dimana semua fitur input memiliki korelasi yang positif dan cenderung menguatkan terhadap fitur target yaitu 'aqi' kecuali fitur 'o3' dan 'so2' yang memiliki korelasi positif namun lemah
   ![Alt text](image.png)
-- mengecek hubungan co dengan pm10 dan pm25 yang merupakan faktor signifikan
+- Mengecek hubungan co dengan pm10 dan pm25 yang merupakan faktor signifikan. Dimana ditemukan bahwa co, pm10, dan pm25 memiliki hubungan yang positif dan menguatkan, hal ini ditunjukkan dengan nilai yang saling berbanding lurus. Oleh karenanya penanganan polusi akibat gas karbon dioksida baik dari industri dan kendaraan bermotor harus di iringi juga dengan penanganan pada partikel polutan yang dihasilkan dari debu kontruksi dan pembakaran sampah sisa tanaman.
   ![Alt text](image-1.png)
   ![Alt text](image-2.png)
-- Mengecek distribusi data, dimana distribusi fitur aqi pada kategori 5 sangat tinggi dibanding kategori 1-4. Hal ini menunjukkan banyak sekali terjadi kualitas udara yang buruk terjadi
+- Mengecek distribusi data, dimana distribusi fitur aqi pada kategori 5 sangat tinggi dibanding kategori 1-4. Hal ini menunjukkan banyak sekali terjadi kualitas udara yang buruk terjadi, dimana hal tersebut disebabkan oleh gas 'co' yang bisa mencapai angka 2307 pada suatu waktu dan memiliki rerata pada kisaran 166
 - ![Alt text](image-3.png)
 - ![Alt text](image-4.png)
+- ![image](https://github.com/AlgorithmBurv/tes/assets/114807151/3f8fc5a0-4ab1-493b-a2b9-40776ef04ece)
+
 
 ## Data Preparation
 
 - Memisahkan data inputan dan data target, karena termasuk metode supervised learning yang membutuhkan data inputan dan target atau label
 - Mengatur serta membagi ukuran data training dan test dengan perbandingan 9:1, hal ini didasasrkan pada jumlah data dimana presentase 10% (2.354,4) sudah dianggap cukup untuk mewakili testing dari jumlah keseluruhan data (23.504)
 - Mengatur random state agar data dalam kondisi yang sama saat digunakan kembali
-- Metode yang digunakan untuk mengatasi outlier adalah IQR yaitu dengan cara mengukur sebaran data dan menghitung selisih antara nilai kuartil ketiga (Q3) dan kuartil pertama (Q1), membantu identifikasi dan analisis pencilan (outliers) dalam suatu set data.
+- Menangani outlier hasil analisa pada tahap data understanding dengan metode IQR yaitu dengan cara mengukur sebaran data dan menghitung selisih antara nilai kuartil ketiga (Q3) dan kuartil pertama (Q1), membantu identifikasi dan analisis pencilan (outliers) dalam suatu set data.
 
 ## Modeling
 
