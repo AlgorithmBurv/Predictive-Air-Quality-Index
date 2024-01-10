@@ -45,7 +45,7 @@ Data yang digunakan merupakan Air Quality Index di negara india dengan rentang w
 
 Teknik pengumpulan data adalah melalui observasi secara realtime yaitu pengumpulan data melalui pengamatan langsung terhadap perilaku atau situasi oleh lembaga Central Pollution Control Board dibawah naungan Kementerian Lingkungan, Kehutanan, dan Iklim India
 
-Jumlah data yang digunakan pada studi kasus ini adalah 23.504 yang tersebar di 26 kota negara India. Adapun terkait data missing value terdapat pada kolom 'o3' dimana ada sekitar 1551 data bernilai 0 oleh karenanya dilakukan handling missing value dengan teknik droup out dengan alasan jumlah dataset yang besar tidak akan terpengaruh, dan karena dataset ini menggunakan satuan ukur dalam μg/m3 dan untuk parameter AQI India dalam mg/m3 maka perlu diperhatikan nilai satuannya (μg/m3 ke mg/m3, sama dengan dibagi 10).
+Jumlah data yang digunakan pada studi kasus ini adalah 23.504 yang tersebar di 26 kota negara India. Adapun terkait data missing value terdapat pada kolom 'o3' dimana ada sekitar 1551 data bernilai 0.
 
 ### Variabel-variabel pada AQI India dataset adalah sebagai berikut:
 
@@ -88,9 +88,14 @@ Ahmedabad, Aizawl, Amaravati, Amritsar, Bengaluru, Bhopal, Brajrajnagar, Chandig
 
 ## Data Preparation
 
+**Train Tes Split**
 - Memisahkan data inputan dan data target, karena termasuk metode supervised learning yang membutuhkan data inputan dan target atau label
+- Karena dataset ini menggunakan satuan ukur dalam μg/m3 dan untuk parameter AQI India dalam mg/m3 maka perlu diperhatikan nilai satuannya (μg/m3 ke mg/m3, sama dengan dibagi 10).
 - Mengatur serta membagi ukuran data training dan test dengan perbandingan 9:1, hal ini didasasrkan pada jumlah data dimana presentase 10% (2.354,4) sudah dianggap cukup untuk mewakili testing dari jumlah keseluruhan data (23.504)
 - Mengatur random state agar data dalam kondisi yang sama saat digunakan kembali
+**Handling Missing Value dengan IQR**
+- Menagani missing value dengan teknik droup out dengan alasan jumlah dataset yang besar tidak akan terpengaruh
+**Handling outlier**
 - Menangani outlier hasil analisa pada tahap data understanding dengan metode IQR yaitu dengan cara mengukur sebaran data dan menghitung selisih antara nilai kuartil ketiga (Q3) dan kuartil pertama (Q1), membantu identifikasi dan analisis pencilan (outliers) dalam suatu set data.
 
 ## Modeling
