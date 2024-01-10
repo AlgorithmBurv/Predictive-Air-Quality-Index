@@ -2,9 +2,9 @@
 
 ## Klasifikasi Air Quality Index India
 
-Polusi udara merupakan fenomena serius yang menghadirkan risiko besar terhadap kesehatan manusia dan keberlanjutan lingkungan. Atmosfer yang tercemar oleh berbagai polutan, baik berasal dari sumber alam maupun aktivitas manusia, dapat menyebabkan dampak yang signifikan. Terutama, kesehatan manusia dapat terancam dengan adanya gangguan saluran pernapasan, peningkatan risiko penyakit kardiovaskular, dan dampak buruk pada perkembangan anak-anak. Selain itu, dampak lingkungan yang merusak tanaman, ekosistem, dan menciptakan fenomena asidifikasi dapat memperburuk kondisi bumi.
+Polusi udara merupakan fenomena serius yang menghadirkan risiko besar terhadap kesehatan manusia dan keberlanjutan lingkungan. Atmosfer yang tercemar oleh berbagai polutan, baik berasal dari sumber alam maupun aktivitas manusia, dapat menyebabkan dampak yang signifikan. Terutama, kesehatan manusia dapat terancam dengan adanya gangguan saluran pernapasan, peningkatan risiko penyakit kardiovaskular, dan dampak buruk pada perkembangan anak-anak. Selain itu, dampak lingkungan yang merusak tanaman, ekosistem, dan menciptakan fenomena asidifikasi dapat memperburuk kondisi bumi [1](https://jurnal.stikescendekiautamakudus.ac.id/index.php/JKM/article/view/384).
 
-Menurut VOA Indonesia dalam judul berita "Polusi Udara di New Delhi SOS, Beberapa Sekolah Terpaksa Ditutup" menyebutkan bahwa Warga di New Delhi berada pada kualitas udara tidak sehat karena diselimuti polusi yang beracun. Indeks kualitas udara (AQI) di beberapa bagian ibu kota India tersebut masuk ke dalam kategori "parah” sehingga mendorong pemerintah memerintahkan penutupan sejumlah sekolah.
+Menurut VOA Indonesia dalam judul berita "Polusi Udara di New Delhi SOS, Beberapa Sekolah Terpaksa Ditutup" menyebutkan bahwa Warga di New Delhi berada pada kualitas udara tidak sehat karena diselimuti polusi yang beracun [2](https://www.voaindonesia.com/a/polusi-udara-di-new-delhi-sos-beberapa-sekolah-terpaksa-ditutup-/7340019.html). Indeks kualitas udara (AQI) di beberapa bagian ibu kota India tersebut masuk ke dalam kategori "parah” sehingga mendorong pemerintah memerintahkan penutupan sejumlah sekolah.
 
 Sumber polusi utama melibatkan emisi dari debu konstruksi, emisi kendaraan, dan asap dari pembakaran liar. Hal itu menyebabkan terjadinya lonjakan penyakit pernapasan di antara 20 juta penduduk kota tersebut.
 
@@ -14,7 +14,7 @@ Pada 19 November 2021, NASA menerbitkan laporan tentang masalah polusi udara di 
 
 Untuk menyelesaikan masalah tersebut pemerintah india mengerahkan alat penyiram air dan senjata antikabut untuk mengendalikan kabut dan banyak orang menggunakan masker untuk menghindari polusi udara, mengumumkan denda sebesar 20.000 rupee ($240) bagi pengemudi yang kedapatan menggunakan mobil berbahan bakar bensin dan solar, Bus dan truk yang menimbulkan kabut asap biasanya model berusia 10 hingga 15 tahun juga akan dikenai denda serupa, melakukan penutupan sekolah untuk menjaga kesehatan para siswa, menangguhkan proyek kontruksi demi mengurangi polutan partikel konstruksi, memperingatkan masyarakat tentang situasi kabut asap yang semakin buruk menjelang penyelenggaraan Diwali, festival cahaya Hindu yang menampilkan penyalaan petasan yang akan diadakan pada 12 November. dan mencegah para petani melakukan pembakaran sisa tanaman pada awal musim tanam gandum di musim dingin dengan menawarkan insentif tunai untuk membeli mesin guna melakukan pekerjaan tersebut guana menghilangkan pembakaran liar.
 
-Beberapa cara untuk menyelesaikan masalah tersebut juga bisa melalui penerapan hasil riset sebagai pembanding penyelesaian masalah seperti citizen lawsuit yaitu memaksa masyarakat dengan regulasi hukum terkait lingkungan hidup, modifikasi cuaca untuk mengurangi dampak polusi udara, sosialisasi dan edukasi kesemua elemen masyarakat terutama penyumbang polusi udara yaitu para petani pembakar sisa tanaman, penggunaan kendaraan umum, tranformasi industri ke ramah lingkungan, peremajaan kendaraan umum, dan SOP terkait pengelolaan pembangunan kontruksi yang memiliki dampak polutan partikel debu.
+Beberapa cara untuk menyelesaikan masalah tersebut juga bisa melalui penerapan hasil riset sebagai pembanding penyelesaian masalah seperti citizen lawsuit yaitu memaksa masyarakat dengan regulasi hukum terkait lingkungan hidup [2](https://journal.pusatpenelitian.com/index.php/jmi/article/view/64), modifikasi cuaca untuk mengurangi dampak polusi udara [3](https://ejurnal.bppt.go.id/index.php/JSTMC/article/view/5303), sosialisasi dan edukasi kesemua elemen masyarakat terutama penyumbang polusi udara yaitu para petani pembakar sisa tanaman [4](https://journal-center.litpam.com/index.php/linov/article/view/969), penggunaan kendaraan umum, tranformasi industri ke ramah lingkungan, peremajaan kendaraan umum, dan SOP terkait pengelolaan pembangunan kontruksi yang memiliki dampak polutan partikel debu.
 
 ## Business Understanding
 
@@ -41,7 +41,7 @@ Oleh karena itu diperlukan prediksi sedini mungkin terhadap kualitas udara demi 
 
 ## Data Understanding
 
-Data yang digunakan merupakan Air Quality Index di negara india dengan rentang waktu 2020 - 2023 yang terdiri dari 9 fitur, namun hanya 6 fitur yang digunakan yaitu city, aqi, co, no2, o3, so2, pm2_5, dan pm10. Pemilihan fitur 'city' adalah untuk mengetahui dimana pengamatan dilakukan, pemilihan fitur 'aqi' adalah untuk mengetahui cluster atau kategori kualitas udara serta sebagai label fitur target karena menggunakan supervised learning, sedangkan pemilihan co, no2, o3, so2, pm2_5, dan pm10 dilandaskan pada fitur yang digunakan pada website Air Quality Index India sebagai zat polutan yang dipantau dalam parameter. Adapun penghapusan 3 fitur dari 9 fitur dataset dikarenakan fitur 'date' tidak diperlukan dalam proses klasifikasi, fitur 'nh3' tidak tersedia di dataset Air Quality index New Delhi sebagai data uji coba sehingga jika tidak dihapus akan terjadi perbedaan fitur antara dataset Air Quality India dan Air Quality New delhi, dan fitur 'no' tidak dimasukkan karena fitur tersebut di web AQI India tidak dimasukkan kedalam parameter zat polutan yang diukur.
+Data yang digunakan merupakan [Air Pollution Data of India 2020-2023](https://www.kaggle.com/datasets/seshupavan/air-pollution-data-of-india-2020-2023) yang terdiri dari 9 fitur, namun hanya 6 fitur yang digunakan yaitu city, aqi, co, no2, o3, so2, pm2_5, dan pm10. Pemilihan fitur 'city' adalah untuk mengetahui dimana pengamatan dilakukan, pemilihan fitur 'aqi' adalah untuk mengetahui cluster atau kategori kualitas udara serta sebagai label fitur target karena menggunakan supervised learning, sedangkan pemilihan co, no2, o3, so2, pm2_5, dan pm10 dilandaskan pada fitur yang digunakan pada website Air Quality Index India sebagai zat polutan yang dipantau dalam parameter. Adapun penghapusan 3 fitur dari 9 fitur dataset dikarenakan fitur 'date' tidak diperlukan dalam proses klasifikasi, fitur 'nh3' tidak tersedia di dataset [New Delhy Air Quality](https://www.kaggle.com/datasets/anuragbantu/new-delhi-air-quality) sebagai data uji coba sehingga jika tidak dihapus akan terjadi perbedaan fitur antara dataset Air Quality India dan Air Quality New delhi, dan fitur 'no' tidak dimasukkan karena fitur tersebut di web AQI India tidak dimasukkan kedalam parameter zat polutan yang diukur.
 
 Teknik pengumpulan data adalah melalui observasi secara realtime yaitu pengumpulan data melalui pengamatan langsung terhadap perilaku atau situasi oleh lembaga Central Pollution Control Board dibawah naungan Kementerian Lingkungan, Kehutanan, dan Iklim India
 
@@ -157,14 +157,5 @@ $$ Recall = {True Positives \over True Positives + False Negatives} $$
 
 $$ F1 Score = {2 × Presisi × Recall \over Presisi + Recall} $$
 
-Referensi:
 
-- [Perlindungan Hak Warga Negara Terhadap Kelalaian Pemerintah Melalui Gugatan Citizen Lawsuit](https://journal.pusatpenelitian.com/index.php/jmi/article/view/64)
-- [Kajian Dampak Lingkungan Industri Terhadap Kualiats Hidup Warga Sekitar](https://jurnal.stikescendekiautamakudus.ac.id/index.php/JKM/article/view/384)
-- [Paradigma Baru Pemanfaatan Teknologi Modifikasi Cuaca dalam Upaya Penanganan Bencana Kebakaran Hutan dan Lahan di Indonesia](https://ejurnal.bppt.go.id/index.php/JSTMC/article/view/5303)
-- [Sosialisasi dan Edukasi Pencegahan Dini Resiko Kebakaran Lahan Gambut di Musim Kemarau kepada Masyarakat Desa Kapur](https://journal-center.litpam.com/index.php/linov/article/view/969)
 
-Sumber:
-
-- [Air Pollution Data of India 2020-2023](https://www.kaggle.com/datasets/seshupavan/air-pollution-data-of-india-2020-2023).
-- [New Delhy Air Quality](https://www.kaggle.com/datasets/anuragbantu/new-delhi-air-quality).
