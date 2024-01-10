@@ -60,7 +60,7 @@ Dataset ini berisi data Polusi Udara harian tahun 2020 hingga tahun 2023, dengan
 | PM2.5   | Partikulat (PM) dengan diameter 2,5 mikrometer atau kurang, yang berhubungan dengan polusi partikel halus.[PlGa]                            |
 | PM10    | Partikulat (PM) dengan diameter 10 mikrometer atau kurang, yang berhubungan dengan polusi partikel kasar.[PlGa]                             |
 
-Notes: Semua kolom polutan berikut diukur dalam μg/m3
+Notes: Semua kolom polutan diatas diukur dalam μg/m3
 
 Kota :
 Ahmedabad, Aizawl, Amaravati, Amritsar, Bengaluru, Bhopal, Brajrajnagar, Chandigarh, Chennai, Coimbatore, Delhi, Ernakulam, Gurugram, Guwahati, Hyderabad, Jaipur, Jorapokhar, Kochi, Kolkata, Lucknow, Mumbai, Patna, Shillong, Talcher, Thiruvananthapuram, Visakhapatnam
